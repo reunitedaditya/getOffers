@@ -1,14 +1,78 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jHs-BV-8rV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="8No-Qu-NMf">
+            <objects>
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jHs-BV-8rV" customClass="LoginViewController" customModule="GetOffers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n51-Nh-z3f"/>
+                        <viewControllerLayoutGuide type="bottom" id="4uJ-YZ-j0G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lfz-Ii-So9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykk-b1-2cb">
+                                <rect key="frame" x="36" y="451" width="303" height="45"/>
+                                <color key="backgroundColor" red="0.23543547093868256" green="0.31985947489738464" blue="0.53341996669769287" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="YOk-Ad-ecB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Login via facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginWithFacebook:" destination="jHs-BV-8rV" eventType="touchUpInside" id="hxE-6e-JFu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon_ios" translatesAutoresizingMaskIntoConstraints="NO" id="ffx-PI-1EK">
+                                <rect key="frame" x="113" y="169" width="148" height="157"/>
+                                <color key="backgroundColor" red="0.91868293285369873" green="0.19848959147930145" blue="0.13729390501976013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="c5T-XM-dEC"/>
+                                    <constraint firstAttribute="height" constant="157" id="hHE-Qu-UbW"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="a7m-Su-Izd">
+                                <rect key="frame" x="169" y="387" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91868293285369873" green="0.19848959147930145" blue="0.13729390501976013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Ykk-b1-2cb" firstAttribute="centerX" secondItem="lfz-Ii-So9" secondAttribute="centerX" id="Iwq-Xk-EoS"/>
+                            <constraint firstItem="Ykk-b1-2cb" firstAttribute="centerY" secondItem="lfz-Ii-So9" secondAttribute="centerY" constant="140" id="LeH-mb-sBw"/>
+                            <constraint firstItem="Ykk-b1-2cb" firstAttribute="top" secondItem="ffx-PI-1EK" secondAttribute="bottom" constant="125" id="PXh-CP-gN1"/>
+                            <constraint firstItem="a7m-Su-Izd" firstAttribute="centerX" secondItem="Ykk-b1-2cb" secondAttribute="centerX" id="XUy-us-4sP"/>
+                            <constraint firstItem="Ykk-b1-2cb" firstAttribute="leading" secondItem="lfz-Ii-So9" secondAttribute="leadingMargin" constant="20" id="g2m-LL-w0K"/>
+                            <constraint firstItem="Ykk-b1-2cb" firstAttribute="top" secondItem="a7m-Su-Izd" secondAttribute="bottom" constant="27" id="mwl-ze-Fhb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ykk-b1-2cb" secondAttribute="trailing" constant="20" id="up1-SX-vJh"/>
+                            <constraint firstItem="ffx-PI-1EK" firstAttribute="centerX" secondItem="Ykk-b1-2cb" secondAttribute="centerX" id="v7e-5v-Wwn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="a7m-Su-Izd" id="hP9-Q0-xKS"/>
+                        <outlet property="facebookButton" destination="Ykk-b1-2cb" id="B8x-Sa-Syg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alV-si-nrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255.19999999999999" y="133.5832083958021"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GetOffers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +80,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZX8-fw-NvY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZX8-fw-NvY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bcl-Od-TP9"/>
+                            <constraint firstAttribute="trailing" secondItem="ZX8-fw-NvY" secondAttribute="trailing" id="Ckf-zD-vcp"/>
+                            <constraint firstItem="ZX8-fw-NvY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="e6L-Jj-YNc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZX8-fw-NvY" secondAttribute="bottom" id="maf-M9-6So"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="b4B-mZ-HgG">
+                        <barButtonItem key="leftBarButtonItem" image="logout" id="rXR-Ql-Env">
+                            <color key="tintColor" red="0.91868293290000003" green="0.19848959150000001" blue="0.13729390499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="logout:" destination="BYZ-38-t0r" id="8z8-2P-jx6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="fbO-Uy-6M0">
+                            <color key="tintColor" red="0.91868293290000003" green="0.19848959150000001" blue="0.13729390499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="refreshOffer:" destination="BYZ-38-t0r" id="6sW-Q2-Mvc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="productImageView" destination="ZX8-fw-NvY" id="T0e-Fo-qdL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1295" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dap-Yt-seJ">
+            <objects>
+                <navigationController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pS6-Se-cfI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xVN-Gr-3g0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lyd-mC-zys"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sm-aL-hr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="app_icon_ios" width="1024" height="1024"/>
+        <image name="logout" width="32" height="32"/>
+    </resources>
 </document>

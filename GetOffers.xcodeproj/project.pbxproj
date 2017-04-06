@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48A956ED1E94F85400939D2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A956EC1E94F85400939D2D /* LoginViewController.swift */; };
 		48FDB2AE1E939F1100280591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDB2AD1E939F1100280591 /* AppDelegate.swift */; };
 		48FDB2B01E939F1100280591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDB2AF1E939F1100280591 /* ViewController.swift */; };
 		48FDB2B31E939F1100280591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FDB2B11E939F1100280591 /* Main.storyboard */; };
@@ -14,6 +15,11 @@
 		48FDB2B81E939F1100280591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FDB2B61E939F1100280591 /* LaunchScreen.storyboard */; };
 		48FDB2C31E939F1100280591 /* GetOffersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDB2C21E939F1100280591 /* GetOffersTests.swift */; };
 		48FDB2CE1E939F1100280591 /* GetOffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDB2CD1E939F1100280591 /* GetOffersUITests.swift */; };
+		48FDB2DC1E939F1C00280591 /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 48FDB2DB1E939F1C00280591 /* 3.wav */; };
+		48FDB2DE1E939F2300280591 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDB2DD1E939F2300280591 /* BackgroundTask.swift */; };
+		7CA64AFE612A94D7CDF7DA15 /* Pods_GetOffersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A9B27848BB0D2BE34913A9 /* Pods_GetOffersUITests.framework */; };
+		968E1E9494005F2A5C8BA6F6 /* Pods_GetOffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F34589CEAE5E8F541C13ABA /* Pods_GetOffers.framework */; };
+		A4E8F4F7DB027AB5A40111D8 /* Pods_GetOffersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4228DF37321C24D69750B9A /* Pods_GetOffersTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F877161C0084E6AE975B9A2 /* Pods-GetOffers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOffers.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetOffers/Pods-GetOffers.release.xcconfig"; sourceTree = "<group>"; };
+		1F34589CEAE5E8F541C13ABA /* Pods_GetOffers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetOffers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2298A6098D8B1A69A1F82B2E /* Pods-GetOffers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOffers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetOffers/Pods-GetOffers.debug.xcconfig"; sourceTree = "<group>"; };
+		48A956EC1E94F85400939D2D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		48FDB2AA1E939F1100280591 /* GetOffers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetOffers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FDB2AD1E939F1100280591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FDB2AF1E939F1100280591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,14 @@
 		48FDB2C91E939F1100280591 /* GetOffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetOffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FDB2CD1E939F1100280591 /* GetOffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOffersUITests.swift; sourceTree = "<group>"; };
 		48FDB2CF1E939F1100280591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48FDB2DB1E939F1C00280591 /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
+		48FDB2DD1E939F2300280591 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
+		4976B4D10AC549FB5194F667 /* Pods-GetOffersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOffersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetOffersTests/Pods-GetOffersTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D5DF51F00499ADD1925311B /* Pods-GetOffersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOffersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetOffersUITests/Pods-GetOffersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9793F3DFDBADD52FC04A35FD /* Pods-GetOffersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOffersUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetOffersUITests/Pods-GetOffersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4228DF37321C24D69750B9A /* Pods_GetOffersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetOffersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A9B27848BB0D2BE34913A9 /* Pods_GetOffersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetOffersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0796C3010BD968A1748483 /* Pods-GetOffersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOffersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetOffersTests/Pods-GetOffersTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968E1E9494005F2A5C8BA6F6 /* Pods_GetOffers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E8F4F7DB027AB5A40111D8 /* Pods_GetOffersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +88,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CA64AFE612A94D7CDF7DA15 /* Pods_GetOffersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F1C5DBDBD135A9EE71C15E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F34589CEAE5E8F541C13ABA /* Pods_GetOffers.framework */,
+				A4228DF37321C24D69750B9A /* Pods_GetOffersTests.framework */,
+				A5A9B27848BB0D2BE34913A9 /* Pods_GetOffersUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B4C29C55F4001A28D2A2DF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2298A6098D8B1A69A1F82B2E /* Pods-GetOffers.debug.xcconfig */,
+				0F877161C0084E6AE975B9A2 /* Pods-GetOffers.release.xcconfig */,
+				AA0796C3010BD968A1748483 /* Pods-GetOffersTests.debug.xcconfig */,
+				4976B4D10AC549FB5194F667 /* Pods-GetOffersTests.release.xcconfig */,
+				9793F3DFDBADD52FC04A35FD /* Pods-GetOffersUITests.debug.xcconfig */,
+				6D5DF51F00499ADD1925311B /* Pods-GetOffersUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		48A956EE1E94F85B00939D2D /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				48FDB2DB1E939F1C00280591 /* 3.wav */,
+				48FDB2DD1E939F2300280591 /* BackgroundTask.swift */,
+			);
+			name = Background;
+			sourceTree = "<group>";
+		};
+		48A956EF1E94F87200939D2D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				48A956EC1E94F85400939D2D /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		48FDB2A11E939F1100280591 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +142,8 @@
 				48FDB2C11E939F1100280591 /* GetOffersTests */,
 				48FDB2CC1E939F1100280591 /* GetOffersUITests */,
 				48FDB2AB1E939F1100280591 /* Products */,
+				2B4C29C55F4001A28D2A2DF2 /* Pods */,
+				0F1C5DBDBD135A9EE71C15E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +160,8 @@
 		48FDB2AC1E939F1100280591 /* GetOffers */ = {
 			isa = PBXGroup;
 			children = (
+				48A956EF1E94F87200939D2D /* Login */,
+				48A956EE1E94F85B00939D2D /* Background */,
 				48FDB2AD1E939F1100280591 /* AppDelegate.swift */,
 				48FDB2AF1E939F1100280591 /* ViewController.swift */,
 				48FDB2B11E939F1100280591 /* Main.storyboard */,
@@ -132,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48FDB2D21E939F1100280591 /* Build configuration list for PBXNativeTarget "GetOffers" */;
 			buildPhases = (
+				E6FB01E912FC8AADE688B3A1 /* [CP] Check Pods Manifest.lock */,
 				48FDB2A61E939F1100280591 /* Sources */,
 				48FDB2A71E939F1100280591 /* Frameworks */,
 				48FDB2A81E939F1100280591 /* Resources */,
+				7D6AF8281A25DD89D20213C8 /* [CP] Embed Pods Frameworks */,
+				20B6F4E9619648BE3D74E749 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48FDB2D51E939F1100280591 /* Build configuration list for PBXNativeTarget "GetOffersTests" */;
 			buildPhases = (
+				8F49AC1D2A96AFF3FE9F8541 /* [CP] Check Pods Manifest.lock */,
 				48FDB2BA1E939F1100280591 /* Sources */,
 				48FDB2BB1E939F1100280591 /* Frameworks */,
 				48FDB2BC1E939F1100280591 /* Resources */,
+				3341BC1E7FC0FD7C8DF3AAFA /* [CP] Embed Pods Frameworks */,
+				062A5CC30E836D4C04589DFC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48FDB2D81E939F1100280591 /* Build configuration list for PBXNativeTarget "GetOffersUITests" */;
 			buildPhases = (
+				F1172B752B91EB9086C24D6B /* [CP] Check Pods Manifest.lock */,
 				48FDB2C51E939F1100280591 /* Sources */,
 				48FDB2C61E939F1100280591 /* Frameworks */,
 				48FDB2C71E939F1100280591 /* Resources */,
+				201181211C7D4A1E6C37CFF4 /* [CP] Embed Pods Frameworks */,
+				F17305B2139E1A06C4D0CB16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +269,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = RAZJB7TT57;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					48FDB2BD1E939F1100280591 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -235,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48FDB2DC1E939F1C00280591 /* 3.wav in Resources */,
 				48FDB2B81E939F1100280591 /* LaunchScreen.storyboard in Resources */,
 				48FDB2B51E939F1100280591 /* Assets.xcassets in Resources */,
 				48FDB2B31E939F1100280591 /* Main.storyboard in Resources */,
@@ -257,11 +340,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		062A5CC30E836D4C04589DFC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetOffersTests/Pods-GetOffersTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		201181211C7D4A1E6C37CFF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetOffersUITests/Pods-GetOffersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20B6F4E9619648BE3D74E749 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetOffers/Pods-GetOffers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3341BC1E7FC0FD7C8DF3AAFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetOffersTests/Pods-GetOffersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D6AF8281A25DD89D20213C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetOffers/Pods-GetOffers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F49AC1D2A96AFF3FE9F8541 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6FB01E912FC8AADE688B3A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1172B752B91EB9086C24D6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F17305B2139E1A06C4D0CB16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetOffersUITests/Pods-GetOffersUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		48FDB2A61E939F1100280591 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A956ED1E94F85400939D2D /* LoginViewController.swift in Sources */,
+				48FDB2DE1E939F2300280591 /* BackgroundTask.swift in Sources */,
 				48FDB2B01E939F1100280591 /* ViewController.swift in Sources */,
 				48FDB2AE1E939F1100280591 /* AppDelegate.swift in Sources */,
 			);
@@ -411,32 +634,42 @@
 		};
 		48FDB2D31E939F1100280591 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2298A6098D8B1A69A1F82B2E /* Pods-GetOffers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RAZJB7TT57;
 				INFOPLIST_FILE = GetOffers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.GetOffers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EWSKT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		48FDB2D41E939F1100280591 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F877161C0084E6AE975B9A2 /* Pods-GetOffers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RAZJB7TT57;
 				INFOPLIST_FILE = GetOffers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.GetOffers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EWSKT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		48FDB2D61E939F1100280591 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA0796C3010BD968A1748483 /* Pods-GetOffersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +685,7 @@
 		};
 		48FDB2D71E939F1100280591 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4976B4D10AC549FB5194F667 /* Pods-GetOffersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -467,6 +701,7 @@
 		};
 		48FDB2D91E939F1100280591 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9793F3DFDBADD52FC04A35FD /* Pods-GetOffersUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = RAZJB7TT57;
@@ -481,6 +716,7 @@
 		};
 		48FDB2DA1E939F1100280591 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D5DF51F00499ADD1925311B /* Pods-GetOffersUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = RAZJB7TT57;
@@ -512,6 +748,7 @@
 				48FDB2D41E939F1100280591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48FDB2D51E939F1100280591 /* Build configuration list for PBXNativeTarget "GetOffersTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +757,7 @@
 				48FDB2D71E939F1100280591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48FDB2D81E939F1100280591 /* Build configuration list for PBXNativeTarget "GetOffersUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +766,7 @@
 				48FDB2DA1E939F1100280591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
