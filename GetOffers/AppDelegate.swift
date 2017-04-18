@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         
-         print("We are back boys")
+      
          
         
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
@@ -71,8 +71,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         
-       
-       
+        if let isLoggedIn = UserDefaults.standard.value(forKey: "accessStatus") {
+            
+            if isLoggedIn as! Bool == true {
+                
+                let loadingStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+                
+                let initialViewControlleripad : UIViewController = loadingStoryBoard.instantiateViewController(withIdentifier: "Main") as! UINavigationController
+                
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = initialViewControlleripad
+                self.window?.makeKeyAndVisible()
+                
+                
+            }
+        }
+        
+
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 

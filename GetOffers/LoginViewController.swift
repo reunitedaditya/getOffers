@@ -20,6 +20,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
+    @IBOutlet weak var imageTopLayoutConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var goOutlet: UIButton!
     
     
     override func viewDidLoad() {
@@ -27,6 +32,8 @@ class LoginViewController: UIViewController {
 
      self.facebookButton.isHidden = false
      self.activityIndicator.isHidden = true
+    self.nameTextField.delegate = self
+    self.goOutlet.isHidden = true
         
     }
 
@@ -48,7 +55,7 @@ class LoginViewController: UIViewController {
             
             if facebookError != nil {
   
-                print("facebook login failed \(facebookError)")
+                print("facebook login failed \(String(describing: facebookError))")
                 
                 
             } else if (facebookResult?.isCancelled)! {
@@ -87,7 +94,7 @@ class LoginViewController: UIViewController {
             
             if ((error) != nil)
             {
-                print("Error: \(error)")
+                print("Error: \(String(describing: error))")
             }
             else
             {
@@ -132,9 +139,12 @@ class LoginViewController: UIViewController {
                 if let object = JSON as? NSDictionary {
                     // json is a dictionary
                     
-                    let data =  object.value(forKey: "data") as! NSNumber
-                    let success = object.value(forKey: "success")  as! NSNumber
+                    let data =  object.value(forKey: "data") as! Int
+                    let success = object.value(forKey: "success")  as! Int
                     
+                    let userDetails = String(data)
+                   UserDefaults.standard.set(userDetails, forKey: "userDetails")
+                   
                     print("data is \(data) success is \(success)")
                     
                     if success == 1 {
@@ -162,13 +172,55 @@ class LoginViewController: UIViewController {
                
             }
         }
-    
-        
-  
+
     }
     
     
- 
-   
+    @IBAction func goAction(_ sender: Any) {
+        
+        if nameTextField.text != "" {
+            print(nameTextField.text!)
+            nameTextField.resignFirstResponder()
+            UserDefaults.standard.set(true, forKey: "accessStatus")
+            
+            let userName = nameTextField.text!
+            let udid = UIDevice.current.identifierForVendor!.uuidString
+            let userEmail = "\(udid)@yopmail.com"
+            
+            self.sendDataToServer(userName: userName, userEmail: userEmail)
+            
+      
+            
+            
+            
+        } else {
+            
+            let alert = UIAlertController(title: "Please entert your name", message: "", preferredStyle: .alert)
+            let alertAction =   UIAlertAction(title: "Okay", style: .default, handler: nil)
+            
+            alert.addAction(alertAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    
+    
 
 }
+
+extension LoginViewController : UITextFieldDelegate {
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+ 
+        self.imageTopLayoutConstraint.constant = -85.0
+        self.goOutlet.isHidden = false
+    }
+
+}
+
+
+

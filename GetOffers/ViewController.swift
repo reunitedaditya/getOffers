@@ -21,9 +21,6 @@ class ViewController: UIViewController, CXCallObserverDelegate {
     @IBOutlet weak var productImageView: UIImageView!
     var downloadImage : Bool = true
 
-
- 
- 
     var timer = Timer()
     var backgroundTask = BackgroundTask()
 
@@ -35,7 +32,8 @@ class ViewController: UIViewController, CXCallObserverDelegate {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         
-        self.handleImage()
+        self.sendDataToServer()
+        self.scheduledTimerWithTimeInterval()
         
         callObserver.setDelegate(self, queue: nil)
         
@@ -48,14 +46,13 @@ class ViewController: UIViewController, CXCallObserverDelegate {
     
     func timerAction() {
         
-         print("Running in background")
-        
         
         switch UIApplication.shared.applicationState {
             
         case .background:
             
-            self.handleImage()
+            print("background")
+            
             
         default:
             print("")
@@ -80,7 +77,6 @@ class ViewController: UIViewController, CXCallObserverDelegate {
             
             print("Call ended from delegate")
             self.triggerNotification()
-            
         }
         
         if call.isOnHold {
@@ -90,47 +86,16 @@ class ViewController: UIViewController, CXCallObserverDelegate {
     }
     
     
-    //Handle Image
-    
-    
-    func handleImage(){
-        
-        
-        Alamofire.request("http://go.graymatrix.com/go.php").responseJSON { response in
-     
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-                
-                if let object = JSON as? NSDictionary {
-                    // json is a dictionary
-                    
-                   let data =  object.value(forKey: "data") as! String
-                    let urlString = "http://" + data
-                    
-                    DispatchQueue.main.async {
-                        
-                        self.productImageView.sd_setImage(with: URL(string: urlString), placeholderImage: #imageLiteral(resourceName: "search-3-512"), options: [.continueInBackground , .progressiveDownload])
-                    
-                         
-                    }
-    
-                }
-            }
-        }
-    }
-    
-
-    
     @IBAction func refreshOffer(_ sender: Any) {
         
-           self.handleImage()
+        self.sendDataToServer()
     }
     
     
     
     @IBAction func logout(_ sender: Any) {
        
-          UserDefaults.standard.set(false, forKey: "accessStatus")
+        UserDefaults.standard.set(false, forKey: "accessStatus")
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Login")
@@ -139,11 +104,7 @@ class ViewController: UIViewController, CXCallObserverDelegate {
     }
     
     
-    
-    
-    
-    
-    
+
     func triggerNotification(){   //Handle Notification
         
         print("notification will be triggered in a second")
@@ -152,8 +113,6 @@ class ViewController: UIViewController, CXCallObserverDelegate {
         content.subtitle = "Checkout this latest offer"
         content.body = "Tap to open"
         content.sound = UNNotificationSound.default()
-        
-    
         
         // Deliver the notification in one second.
         let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1.0, repeats: false)
@@ -169,18 +128,59 @@ class ViewController: UIViewController, CXCallObserverDelegate {
         }
         
     }
-    
 
+    
+    // SEND USER DETAILS
+    
+    func sendDataToServer(){
+
+        
+        let parameters = ["userId" : UserDefaults.standard.value(forKey: "userDetails") as! String, "udid" : UIDevice.current.identifierForVendor!.uuidString] as [String : Any]
+        
+        Alamofire.request("http://go.graymatrix.com/api/go", method: .post, parameters: parameters).responseJSON { response in
+
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+                
+                if let object = JSON as? NSDictionary {
+                    // json is a dictionary
+                    
+                    let data =  object.value(forKey: "data") as! String
+                    
+                    self.productImageView.sd_setImage(with: URL(string: data), placeholderImage: #imageLiteral(resourceName: "search-3-512"), options: [.continueInBackground , .progressiveDownload])
+                    
+                    print("this is Json")
+                }
+
+            }
+        }
+        
+    }
+    
+    var timer2 = Timer()
+    
+  
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
+        
+        timer2 = Timer.scheduledTimer(timeInterval: 3600, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+    }
+    
+    func updateCounting(){
+        NSLog("counting..")
+        
+        backgroundTask.stopBackgroundTask()
+        backgroundTask.startBackgroundTask()
+    }
 }
 
-extension ViewController:UNUserNotificationCenterDelegate{
+extension ViewController:UNUserNotificationCenterDelegate {
     
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
         print("Tapped in notification")
-        self.handleImage()
-    
+
     }
     
     //This is key callback to present notification while the app is in foreground

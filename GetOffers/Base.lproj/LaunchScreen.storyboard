@@ -21,16 +21,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spalsh_screen_ios" translatesAutoresizingMaskIntoConstraints="NO" id="xab-9K-WL0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon_ios" translatesAutoresizingMaskIntoConstraints="NO" id="HXj-AI-4Vr">
+                                <rect key="frame" x="113.5" y="169" width="148" height="157"/>
+                                <color key="backgroundColor" red="0.91868293290000003" green="0.19848959150000001" blue="0.13729390499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="ZWw-zr-ANj"/>
+                                    <constraint firstAttribute="width" constant="148" id="rJa-10-9KG"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91868293290000003" green="0.19848959150000001" blue="0.13729390499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="xab-9K-WL0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="DAF-oM-2f0"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="xab-9K-WL0" secondAttribute="bottom" id="TUc-Rq-cLM"/>
-                            <constraint firstItem="xab-9K-WL0" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="hmw-eW-MWQ"/>
-                            <constraint firstAttribute="trailing" secondItem="xab-9K-WL0" secondAttribute="trailing" id="xH8-WD-lbL"/>
+                            <constraint firstItem="HXj-AI-4Vr" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="149" id="Pas-Sm-1GC"/>
+                            <constraint firstItem="HXj-AI-4Vr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nXu-Ga-1OD"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,6 +43,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="spalsh_screen_ios" width="750" height="1334"/>
+        <image name="app_icon_ios" width="1024" height="1024"/>
     </resources>
 </document>
